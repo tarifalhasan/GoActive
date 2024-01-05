@@ -20,6 +20,12 @@ const config: Config = {
       },
     },
     extend: {
+      backgroundImage: {
+        s: "linear-gradient(131deg, #42E2A8 57.36%, #BDFF00 113.42%)",
+        black: "linear-gradient(131deg, #000 100%, #000 100%)",
+        "hero-background": "url('/images/hero_reg.png')",
+        g5: "linear-gradient(90deg, #191E23 1.65%, rgba(25, 30, 35, 0.00) 102.83%)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -31,7 +37,8 @@ const config: Config = {
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT:
+            "hsllinear-gradient(90deg, #191E23 1.65%, rgba(25, 30, 35, 0.00) 102.83%)(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
@@ -54,6 +61,7 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "gray-300": "#828489",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -75,7 +83,12 @@ const config: Config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        inter: "var(--font-inter)",
+        ubuntu: "var(--font-ubuntu)",
+      },
+      fontSize: {
+        "t-26": "1.625rem",
+        "t-40": "2.5rem",
       },
     },
   },

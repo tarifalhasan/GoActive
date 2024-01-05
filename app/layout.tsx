@@ -1,13 +1,9 @@
 import "@/styles/globals.css";
-import { Inter as FontSans } from "next/font/google";
 
+import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
+import { inter, ubuntu } from "@/utils/Font";
 import { ReactNode } from "react";
-
-export const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -15,11 +11,19 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head />
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
+          "min-h-screen  font-sans antialiased",
+          inter.variable,
+          ubuntu.variable
         )}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
