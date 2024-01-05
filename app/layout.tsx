@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 
+import Footer from "@/components/shared/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import { inter, ubuntu } from "@/utils/Font";
@@ -22,7 +23,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <main> {children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
