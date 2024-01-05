@@ -22,7 +22,7 @@ const Sponsored: React.FC<SponsoredProps> = ({ images }) => {
   }, [images]); // Update the effect dependency to include 'images'
 
   return (
-    <div className="w-full relative z-20 -mt-[15px] lg:mt-0 py-5 lg:py-[48px] bg-[#191E23]  lg:px-[180px]">
+    <div className="w-full relative z-20 -mt-[15px] lg:mt-0 py-5 lg:py-[48px]   bg-gary-550 lg:px-[180px]">
       <div className=" gap-y-8">
         <h4 className="text-gray-300 text-center text-xs sm:text-lg font-medium">
           Trusted By

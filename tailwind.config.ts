@@ -64,6 +64,7 @@ const config: Config = {
         },
         "gray-300": "#828489",
         "gray-350": "#AAACB1",
+        "gary-550": "#191E23",
       },
       borderRadius: {
         lg: "var(--radius)",
