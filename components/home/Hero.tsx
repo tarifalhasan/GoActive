@@ -36,7 +36,7 @@ const Hero = () => {
       <div className="space-y-3 container relative z-30 pt-6  lg:pt-7 md:space-y-8 flex sm:items-center flex-col">
         <div>
           <button
-            aria-label="play with GoActive"
+            aria-label=" Play Together. Thrive Together. With GoActive."
             className=" inline-flex items-center bg-secondary/35  bg-opacity-20 lg:bg-secondary font-bold py-2 px-3 sm:px-6 rounded-full hover:bg-secondary/80"
           >
             <span className="font-bold tg block text-xs md:text-base bg-clip-text  bg-s lg:bg-black">
