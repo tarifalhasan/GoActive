@@ -13,7 +13,7 @@ const Header = () => {
           height={24}
         />
       </Link>
-      <button>
+      <button aria-label="nav-menu">
         <HiOutlineMenu className=" w-6 h-6 text-white" />
       </button>
     </header>

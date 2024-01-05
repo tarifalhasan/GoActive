@@ -35,7 +35,10 @@ const Hero = () => {
     <section className=" overflow-hidden   relative  sm:items-center">
       <div className="space-y-3 container relative z-30 pt-6  lg:pt-7 md:space-y-8 flex sm:items-center flex-col">
         <div>
-          <button className=" inline-flex items-center bg-secondary/35  bg-opacity-20 lg:bg-secondary font-bold py-2 px-3 sm:px-6 rounded-full hover:bg-secondary/80">
+          <button
+            aria-label="play with GoActive"
+            className=" inline-flex items-center bg-secondary/35  bg-opacity-20 lg:bg-secondary font-bold py-2 px-3 sm:px-6 rounded-full hover:bg-secondary/80"
+          >
             <span className="font-bold tg block text-xs md:text-base bg-clip-text  bg-s lg:bg-black">
               Play Together. Thrive Together. With GoActive.
             </span>
@@ -55,10 +58,10 @@ const Hero = () => {
         </div>
         <div className="  w-full space-y-6">
           <div className="flex items-center justify-start sm:justify-center space-x-4">
-            <button>
+            <button aria-label="Download from Apple App Store">
               <AppleIcons />
             </button>
-            <button>
+            <button aria-label="Download from Google Play Store">
               <GoolePlay />
             </button>
           </div>
