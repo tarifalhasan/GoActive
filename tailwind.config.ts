@@ -27,6 +27,7 @@ const config: Config = {
         g5: "linear-gradient(90deg, #191E23 1.65%, rgba(25, 30, 35, 0.00) 102.83%)",
         activeCard:
           "linear-gradient(180deg, #191E23 0%, rgba(25, 30, 35, 0.00) 114.81%)",
+        "bg-4": "url('/images/bg-10.png')",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -65,6 +66,7 @@ const config: Config = {
         "gray-300": "#828489",
         "gray-350": "#AAACB1",
         "gary-550": "#191E23",
+        "gray-400": "#F7F7F7",
       },
       borderRadius: {
         lg: "var(--radius)",
