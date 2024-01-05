@@ -92,6 +92,9 @@
   p {
     @apply text-[#D7D7D7] font-normal text-[0.8125rem] sm:text-[1.25rem] leading-[185%] sm:leading-[160%];
   }
+  .heading1 {
+    @apply text-[1.5rem] sm:text-[1.9rem] font-bold leading-normal lg:text-[2.625rem];
+  }
 }
 
 @layer components {

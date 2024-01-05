@@ -25,6 +25,8 @@ const config: Config = {
         black: "linear-gradient(131deg, #000 100%, #000 100%)",
         "hero-background": "url('/images/hero_reg.png')",
         g5: "linear-gradient(90deg, #191E23 1.65%, rgba(25, 30, 35, 0.00) 102.83%)",
+        activeCard:
+          "linear-gradient(180deg, #191E23 0%, rgba(25, 30, 35, 0.00) 114.81%)",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -37,8 +39,7 @@ const config: Config = {
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT:
-            "hsllinear-gradient(90deg, #191E23 1.65%, rgba(25, 30, 35, 0.00) 102.83%)(var(--secondary))",
+          DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
@@ -62,6 +63,7 @@ const config: Config = {
           foreground: "hsl(var(--card-foreground))",
         },
         "gray-300": "#828489",
+        "gray-350": "#AAACB1",
       },
       borderRadius: {
         lg: "var(--radius)",

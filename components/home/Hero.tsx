@@ -33,7 +33,7 @@ const Hero = () => {
   ];
   return (
     <section className=" overflow-hidden   relative  sm:items-center">
-      <div className="space-y-3 container relative z-30 pt-6  lg:pt-14 md:space-y-8 flex sm:items-center flex-col">
+      <div className="space-y-3 container relative z-30 pt-6  lg:pt-7 md:space-y-8 flex sm:items-center flex-col">
         <div>
           <button className=" inline-flex items-center bg-secondary/35  bg-opacity-20 lg:bg-secondary font-bold py-2 px-3 sm:px-6 rounded-full hover:bg-secondary/80">
             <span className="font-bold tg block text-xs md:text-base bg-clip-text  bg-s lg:bg-black">
@@ -42,7 +42,7 @@ const Hero = () => {
           </button>
         </div>
         <div className="space-y-2 w-full lg:space-y-4">
-          <h2 className="text-t-26 md:text-t-40  leading-[146%] sm:leading-[130%] text-left md:text-center">
+          <h2 className="text-t-26 md:text-t-40  lg:text-[3.25rem] leading-[146%] sm:leading-[130%] text-left md:text-center">
             The Ultimate Hub To Connect <br className=" hidden sm:block" />{" "}
             Communities Through <span className="tg bg-s">Sports</span> &{" "}
             <span className="tg bg-s">Activities</span>
