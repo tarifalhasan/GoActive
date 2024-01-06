@@ -71,6 +71,8 @@ const config: Config = {
         skin: {
           "slate-200": "#D7D7D7",
           "slate-900": "#111112",
+          "slate-800": "#242424",
+          border: "#323232",
         },
       },
       borderRadius: {
