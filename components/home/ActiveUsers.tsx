@@ -1,5 +1,7 @@
+"use client";
+import { fadeId } from "@/lib/animation";
+import { motion as m } from "framer-motion";
 import Image from "next/image";
-
 const ActiveUsers = () => {
   const DATA = [
     {
@@ -35,16 +37,34 @@ const ActiveUsers = () => {
   return (
     <section className="container py-8 lg:py-16 space-y-[27px] lg:space-y-[48px]">
       <div className="space-y-3 lg:space-y-4 ">
-        <h2 className="heading1 text-center">
+        <m.h2
+          variants={fadeId("down", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.6 }}
+          className="heading1 text-center"
+        >
           3,583 Active Users At{" "}
           <span className=" text-secondary">GoActive</span>
-        </h2>
-        <p className="text-center max-w-[681px] mx-auto">
+        </m.h2>
+        <m.p
+          variants={fadeId("down", 0.4)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.6 }}
+          className="text-center max-w-[681px] mx-auto"
+        >
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry Lorem Ipsum has been the industry&apos;s
-        </p>
+        </m.p>
       </div>
-      <div className=" grid sm:grid-cols-2 lg:grid-cols-3 gap-[30px]">
+      <m.div
+        variants={fadeId("up", 0.6)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.8 }}
+        className=" grid sm:grid-cols-2 lg:grid-cols-3 gap-[30px]"
+      >
         {DATA.map((item, i) => (
           <div
             key={i}
@@ -78,7 +98,7 @@ const ActiveUsers = () => {
             </div>
           </div>
         ))}
-      </div>
+      </m.div>
     </section>
   );
 };

@@ -1,8 +1,11 @@
+"use client";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { FC } from "react";
 import { IoPlayCircle } from "react-icons/io5";
 
+import { fadeId } from "@/lib/animation";
+import { motion as m } from "framer-motion";
 interface FeatureProps {
   title: string;
   desciption: string;
@@ -30,26 +33,55 @@ const FeatureCard: FC<FeatureProps> = ({
     >
       <div className="space-y-5 max-w-[626px]">
         <div className="space-y-4">
-          <button className=" hover:bg-secondary/50 bg-black py-2 inline-flex items-center gap-x-2 px-[18px] rounded-full">
+          <m.button
+            variants={fadeId("down", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.6 }}
+            className=" hover:bg-secondary/50 bg-black py-2 inline-flex items-center gap-x-2 px-[18px] rounded-full"
+          >
             <IoPlayCircle className="w-[18px] h-[18px] text-secondary" />
             <span className="text-lg  uppercase font-inter text-secondary font-semibold">
               {buttonText}
             </span>
-          </button>
-          <h3 className="text-2xl text-secondary font-bold">{subTitle}</h3>
+          </m.button>
+          <m.h3
+            variants={fadeId("down", 0.4)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.6 }}
+            className="text-2xl text-secondary font-bold"
+          >
+            {subTitle}
+          </m.h3>
         </div>
-        <h2 className="text-[2.375rem] font-bold text-white leading-[126%]">
+        <m.h2
+          variants={fadeId("down", 0.6)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.8 }}
+          className="text-[2.375rem] font-bold text-white leading-[126%]"
+        >
           {title}
-        </h2>
-        <p>{desciption}</p>
+        </m.h2>
+        <m.p
+          variants={fadeId("down", 0.6)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.8 }}
+        >
+          {desciption}
+        </m.p>
       </div>
-      <Image
-        className=" absolute  top-[82px] right-[82px]"
-        src={image}
-        width={315}
-        height={676}
-        alt="go-play-"
-      />
+      <m.div>
+        <Image
+          className=" absolute  top-[82px] right-[82px]"
+          src={image}
+          width={315}
+          height={676}
+          alt="go-play-"
+        />
+      </m.div>
     </div>
   ) : (
     <div
@@ -60,28 +92,60 @@ const FeatureCard: FC<FeatureProps> = ({
     >
       <div className="space-y-5 max-w-[626px]">
         <div className="space-y-4">
-          <button className=" hover:bg-secondary/50 bg-black py-2 inline-flex items-center gap-x-2 px-[18px] rounded-full">
+          <m.button
+            variants={fadeId("down", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.6 }}
+            className=" hover:bg-secondary/50 bg-black py-2 inline-flex items-center gap-x-2 px-[18px] rounded-full"
+          >
             <IoPlayCircle className="w-[18px] h-[18px] text-secondary" />
             <span className="text-lg  uppercase font-inter text-secondary font-semibold">
               {buttonText}
             </span>
-          </button>
-          <h3 className=" hidden lg:block text-xl lg:text-2xl text-secondary font-bold">
+          </m.button>
+          <m.h3
+            variants={fadeId("down", 0.4)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.6 }}
+            className="text-2xl text-secondary font-bold"
+          >
             {subTitle}
-          </h3>
+          </m.h3>
         </div>
-        <h2 className="text-[1.125rem]  lg:text-[2.375rem] font-bold text-white leading-[126%]">
+        <m.h2
+          variants={fadeId("down", 0.6)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.8 }}
+          className="text-[2.375rem] font-bold text-white leading-[126%]"
+        >
           {title}
-        </h2>
-        <p className="text-sm lg:text-xl font-normal">{desciption}</p>
+        </m.h2>
+        <m.p
+          variants={fadeId("down", 0.6)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.8 }}
+        >
+          {desciption}
+        </m.p>
       </div>
-      <Image
-        className=" "
-        src={image}
-        width={315}
-        height={676}
-        alt="go-play-"
-      />
+      <m.div
+        variants={fadeId("up", 0.6)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.2 }}
+      >
+        <Image
+          className=" "
+          src={image}
+          width={315}
+          height={676}
+          alt="go-play-"
+        />
+      </m.div>
     </div>
   );
 };

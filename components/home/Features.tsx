@@ -1,12 +1,21 @@
+"use client";
+import { fadeId } from "@/lib/animation";
+import { motion as m } from "framer-motion";
 import FeatureCard from "../shared/FeatureCard";
 
 const Features = () => {
   return (
     <section className=" container space-y-6 lg:space-y-12">
       <div className=" space-y-3">
-        <h2 className="heading1 text-left sm:text-center">
+        <m.h2
+          variants={fadeId("down", 0.6)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.6 }}
+          className="heading1 text-left sm:text-center"
+        >
           Our Feature <span className="tg bg-s">GoActive</span>
-        </h2>
+        </m.h2>
         <p className=" lg:hidden">
           Lorem Ipsum is simply dummy text of the printing and types etting
           industry Lorem Ipsum has been the industry&apos;s

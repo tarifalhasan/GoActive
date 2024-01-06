@@ -1,3 +1,6 @@
+"use client";
+import { fadeId } from "@/lib/animation";
+import { motion as m } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/button";
@@ -5,7 +8,13 @@ import { Button } from "../ui/button";
 const Footer = () => {
   return (
     <footer>
-      <div className=" overflow-hidden gap-6 flex flex-col flex-wrap lg:flex-row lg:items-start justify-between  container pt-[45px] lg:pt-[110px] pb-[32px] lg:pb-[58px]">
+      <m.div
+        variants={fadeId("up", 0.4)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.2 }}
+        className=" overflow-hidden gap-6 flex flex-col flex-wrap lg:flex-row lg:items-start justify-between  container pt-[45px] lg:pt-[110px] pb-[32px] lg:pb-[58px]"
+      >
         <div className="space-y-3 max-w-[235px] lg:space-y-4">
           <Image
             width={195}
@@ -159,7 +168,7 @@ const Footer = () => {
             </Button>
           </div>
         </div>
-      </div>
+      </m.div>
       <div className=" pb-[32px] lg:pb-[46px] container pt-11 lg:pt-6 flex flex-wrap justify-between gap-4">
         <p className="text-[#AFAFAF] text-sm font-normal">
           © Copyright ©2023 All rights reserved goactive.com{" "}
