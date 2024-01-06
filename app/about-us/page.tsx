@@ -1,3 +1,4 @@
+import CoreValues from "@/components/about-us/CoreValues";
 import OurFounders from "@/components/about-us/OurFounders";
 import OurMission from "@/components/about-us/OurMission";
 import Header from "@/components/header";
@@ -30,6 +31,7 @@ const AboutUs = async () => {
       <Header />
       <OurMission />
       <OurFounders data={founderDummyData} />
+      <CoreValues />
     </>
   );
 };
