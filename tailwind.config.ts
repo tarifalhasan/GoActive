@@ -68,6 +68,10 @@ const config: Config = {
         "gary-550": "#191E23",
         "gray-400": "#F7F7F7",
         "black-400": "#2E2E2F",
+        skin: {
+          "slate-200": "#D7D7D7",
+          "slate-900": "#111112",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
