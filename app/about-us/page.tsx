@@ -1,7 +1,9 @@
+import AboutGoactive from "@/components/about-us/AboutGoactive";
 import CoreValues from "@/components/about-us/CoreValues";
 import OurFounders from "@/components/about-us/OurFounders";
 import OurMission from "@/components/about-us/OurMission";
 import Header from "@/components/header";
+import TheUltimateHub from "@/components/home/TheUltimateHub";
 import { IFounder } from "@/types";
 
 const AboutUs = async () => {
@@ -32,6 +34,8 @@ const AboutUs = async () => {
       <OurMission />
       <OurFounders data={founderDummyData} />
       <CoreValues />
+      <AboutGoactive />
+      <TheUltimateHub />
     </>
   );
 };
