@@ -45,7 +45,7 @@ const Contact = () => {
   }
   return (
     <section className="bg-slate-900 mt-[40px]  lg:mt-[70px] py-[40px] lg:py-[80px]">
-      <div className="grid container lg:grid-cols-2  gap-8 lg:gap-16">
+      <div className="grid relative overflow-hidden container lg:grid-cols-2  gap-8 lg:gap-16">
         <div
           data-aos-duration="2000"
           data-aos="fade-right"
