@@ -84,7 +84,7 @@ const ActiveUsers = () => {
         initial="hidden"
         exit="exit"
         whileInView="show"
-        viewport={{ once: true, amount: 0.6 }}
+        viewport={{ once: false, amount: 0.6 }}
         className=" grid sm:grid-cols-2 lg:grid-cols-3 gap-[30px]"
       >
         {DATA.map((item, i) => (

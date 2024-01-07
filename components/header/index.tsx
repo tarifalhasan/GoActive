@@ -55,7 +55,7 @@ const Header = () => {
       className={cn(
         header
           ? "bg-background   py-4 shadow-md"
-          : "bg-transparent shadow-none py-4",
+          : "bg-transparent shadow-none py-5",
         "fixed w-full    mx-auto z-[999] transition-all duration-300"
       )}
     >

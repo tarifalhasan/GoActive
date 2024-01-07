@@ -20,7 +20,7 @@ const OurFounders: FC<Props> = ({ data }) => {
           initial="hidden"
           exit="exit"
           whileInView="show"
-          viewport={{ once: true, amount: 0.6 }}
+          viewport={{ once: false, amount: 0.6 }}
           className="grid gap-2 lg:gap-5 grid-cols-3"
         >
           {data.map((item) => (

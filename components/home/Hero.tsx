@@ -93,7 +93,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="relative z-20">
-        <div className="  sm:ml-[7.5%] ">
+        <div className="  sm:ml-[100px] ">
           <div data-aos="fade-up">
             <Image
               src={"/images/mobile.png"}
