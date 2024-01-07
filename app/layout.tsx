@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 
+import Header from "@/components/header";
 import Footer from "@/components/shared/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
@@ -23,7 +24,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           enableSystem
           disableTransitionOnChange
         >
-          <main> {children}</main>
+          <Header />
+          <main className=" pt-[85px] lg:pt-[105px]"> {children}</main>
           <Footer />
         </ThemeProvider>
       </body>

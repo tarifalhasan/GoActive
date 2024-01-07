@@ -89,6 +89,9 @@
   button {
     @apply font-inter;
   }
+  .container {
+    @apply px-4 sm:px-8;
+  }
   p {
     @apply text-[#D7D7D7] font-normal text-[0.8125rem] sm:text-[1.25rem] leading-[185%] sm:leading-[160%];
   }
