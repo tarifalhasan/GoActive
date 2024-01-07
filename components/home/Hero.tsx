@@ -42,7 +42,7 @@ const Hero = () => {
             variants={fadeId("right", 0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.6 }}
+            viewport={{ once: true, amount: 0.6 }}
             aria-label=" Play Together. Thrive Together. With GoActive."
             className=" inline-flex items-center bg-secondary/35  bg-opacity-20 lg:bg-secondary font-bold py-2 px-3 sm:px-6 rounded-full hover:bg-secondary/80"
           >
@@ -56,7 +56,7 @@ const Hero = () => {
             variants={fadeId("down", 0.4)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.6 }}
+            viewport={{ once: true, amount: 0.6 }}
             className="text-t-26 md:text-t-40  lg:text-[3.25rem] leading-[146%] sm:leading-[130%] text-left md:text-center"
           >
             The Ultimate Hub To Connect <br className=" hidden sm:block" />{" "}
@@ -67,7 +67,7 @@ const Hero = () => {
             variants={fadeId("down", 0.6)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.6 }}
+            viewport={{ once: true, amount: 0.6 }}
             className=" md:max-w-[90%] lg:max-w-[720px] text-left md:text-center md:mx-auto"
           >
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -80,7 +80,7 @@ const Hero = () => {
             variants={fadeId("down", 0.8)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.8 }}
+            viewport={{ once: true, amount: 0.8 }}
             className="flex items-center justify-start sm:justify-center space-x-4"
           >
             <button aria-label="Download from Apple App Store">
@@ -94,12 +94,7 @@ const Hero = () => {
       </div>
       <div className="relative z-20">
         <div className="  sm:ml-[7.5%] ">
-          <m.div
-            variants={fadeId("up", 0.6)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.6 }}
-          >
+          <div data-aos="fade-up">
             <Image
               src={"/images/mobile.png"}
               alt="mobile"
@@ -107,13 +102,8 @@ const Hero = () => {
               className=" hidden lg:block mx-auto"
               height={720}
             />
-          </m.div>
-          <m.div
-            variants={fadeId("up", 0.6)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.6 }}
-          >
+          </div>
+          <div>
             <Image
               src={"/images/horo_mobile_2.png"}
               alt="mobile"
@@ -121,7 +111,7 @@ const Hero = () => {
               className="  lg:hidden mx-auto"
               height={450}
             />
-          </m.div>
+          </div>
         </div>
         <Sponsored images={SponsoredList} />
       </div>

@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { HiOutlineMenu } from "react-icons/hi";
 import { useMediaQuery } from "react-responsive";
+import AnimatedLink from "../animatedLink";
 import { Button } from "../ui/button";
 const Header = () => {
   const pathName = usePathname();
@@ -55,7 +56,7 @@ const Header = () => {
         header
           ? "bg-background   py-4 shadow-md"
           : "bg-transparent shadow-none py-4",
-        "fixed w-full  border-b xl:border-b-0 border-secondary  mx-auto z-[999] transition-all duration-300"
+        "fixed w-full    mx-auto z-[999] transition-all duration-300"
       )}
     >
       <div className=" px-4 xl:container mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between">
@@ -86,7 +87,7 @@ const Header = () => {
                 )}
                 key={index}
               >
-                <Link href={link.href}>{link.label}</Link>
+                <AnimatedLink href={link.href}>{link.label}</AnimatedLink>
               </li>
             ))}
           </ul>
@@ -101,31 +102,34 @@ const Header = () => {
             )}
           </div>
         </div>
-        <ul
-          className={cn(
-            nav
-              ? " py-8 xl:py-0  xl:px-0"
-              : "max-h-0 xl:max-h-max w-full bg-background",
-            " flex  flex-col items-center w-full bg-background  xl:flex-row xl:w-max xl:gap-x-8 gap-y-5"
-          )}
-        >
-          {Links.map((link, index) => (
-            <li
-              className={cn(
-                "relative xl:hidden  text-base ",
-                pathName === link.href
-                  ? " text-secondary font-bold after:left-0 after:-bottom-[8px] after:absolute after:w-full after:h-[2px] after:bg-secondary"
-                  : " text-white font-medium"
-              )}
-              key={index}
-            >
-              <Link href={link.href}>{link.label}</Link>
+        {nav && (
+          <ul
+            className={cn(
+              nav
+                ? " py-8 xl:py-0  xl:px-0"
+                : "max-h-0 xl:max-h-max w-full bg-background",
+              " flex  flex-col items-center w-full bg-background  xl:flex-row xl:w-max xl:gap-x-8 gap-y-5"
+            )}
+          >
+            {Links.map((link, index) => (
+              <li
+                onClick={() => setNav(false)}
+                className={cn(
+                  "relative xl:hidden  text-base ",
+                  pathName === link.href
+                    ? " text-secondary font-bold after:left-0 after:-bottom-[8px] after:absolute after:w-full after:h-[2px] after:bg-secondary"
+                    : " text-white font-medium"
+                )}
+                key={index}
+              >
+                <Link href={link.href}>{link.label}</Link>
+              </li>
+            ))}
+            <li>
+              <Button variant={"secondary"}>Coming Soon</Button>
             </li>
-          ))}
-          <li>
-            <Button variant={"secondary"}>Coming Soon</Button>
-          </li>
-        </ul>
+          </ul>
+        )}
       </div>
     </header>
   );

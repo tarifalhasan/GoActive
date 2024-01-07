@@ -1,6 +1,7 @@
+import { animateItems } from "@/lib/animation";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { FC } from "react";
-
 interface Props {
   icon: string;
   title: string;
@@ -8,7 +9,10 @@ interface Props {
 }
 const CoreValuesCard: FC<Props> = ({ icon, title, description }) => {
   return (
-    <div className="flex flex-col  items-center space-y-6 lg:space-y-8">
+    <motion.div
+      variants={animateItems}
+      className="flex flex-col  items-center space-y-6 lg:space-y-8"
+    >
       <Image src={icon} alt={title} width={54} height={54} />
       <div className="space-y-3 lg:space-y-4">
         <h2 className="text-lg text-center font-bold text-white lg:text-2xl">
@@ -18,7 +22,7 @@ const CoreValuesCard: FC<Props> = ({ icon, title, description }) => {
           {description}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

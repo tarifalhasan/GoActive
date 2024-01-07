@@ -1,6 +1,8 @@
 import "@/styles/globals.css";
 
+import { AOSInit } from "@/components/aos";
 import Header from "@/components/header";
+import PageWrapper from "@/components/page-wrapper";
 import Footer from "@/components/shared/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
@@ -11,6 +13,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
+      <AOSInit />
       <body
         className={cn(
           "min-h-screen  font-sans antialiased",
@@ -25,7 +28,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           disableTransitionOnChange
         >
           <Header />
-          <main className=" pt-[85px] lg:pt-[105px]"> {children}</main>
+          <PageWrapper>{children}</PageWrapper>
           <Footer />
         </ThemeProvider>
       </body>

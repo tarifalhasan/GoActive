@@ -4,3 +4,6 @@ export interface IFounder {
   role: string;
   id: number;
 }
+export interface ExtendedDocument extends Document {
+  startViewTransition?: any;
+}

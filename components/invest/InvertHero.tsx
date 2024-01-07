@@ -3,7 +3,11 @@ import Image from "next/image";
 const InvertHero = () => {
   return (
     <section className="grid  gap-6 py-7 container lg:grid-cols-2 items-center">
-      <div className="max-w-[458px]">
+      <div
+        data-aos-duration="2000"
+        data-aos="fade-right"
+        className="max-w-[458px]"
+      >
         <div className="space-y-2 lg:space-y-4">
           <h2 className="text-2xl lg:text-5xl font-bold text-gray-400">
             Invest in GoActive
@@ -16,7 +20,7 @@ const InvertHero = () => {
           </p>
         </div>
       </div>
-      <div>
+      <div data-aos-duration="2000" data-aos="fade-left">
         <Image
           src={"/images/invest_hero.png"}
           alt="dfdsfds"

@@ -10,11 +10,31 @@ export const fadeId = (direction: string, delay: number) => {
       x: 0,
       opacity: 1,
       transition: {
-        type: "tween",
+        // type: "tween",
         duration: 1.2,
         delay,
-        ease: [0.25, 0.1, 0.25, 1], // Four numerical values for cubic bezier
+        // ease: [0.25, 0.1, 0.25, 1],
       },
     },
   };
+};
+
+export const animateContainer = {
+  show: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+export const animateItems = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.3,
+      type: "tween",
+    },
+  },
 };

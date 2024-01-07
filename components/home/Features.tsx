@@ -11,7 +11,7 @@ const Features = () => {
           variants={fadeId("down", 0.6)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.6 }}
           className="heading1 text-left sm:text-center"
         >
           Our Feature <span className="tg bg-s">GoActive</span>

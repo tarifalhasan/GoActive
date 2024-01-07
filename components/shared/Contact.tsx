@@ -46,7 +46,11 @@ const Contact = () => {
   return (
     <section className="bg-slate-900 py-[40px] lg:py-[80px]">
       <div className="grid container lg:grid-cols-2  gap-8 lg:gap-16">
-        <div className="flex flex-col gap-6 justify-between">
+        <div
+          data-aos-duration="2000"
+          data-aos="fade-right"
+          className="flex flex-col gap-6 justify-between"
+        >
           <h2 className="text-2xl lg:text-[3.25rem] font-bold lg:leading-[119%]">
             Sign up for our priority investor waitlist
           </h2>
@@ -126,7 +130,7 @@ const Contact = () => {
             </form>
           </Form>
         </div>
-        <div>
+        <div data-aos="fade-left" data-aos-duration="2000">
           <Image
             src={"/images/contact.png"}
             width={550}

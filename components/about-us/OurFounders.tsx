@@ -1,7 +1,10 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { IFounder } from "@/types";
-import { FC } from "react";
+"use client";
 
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { animateContainer, animateItems } from "@/lib/animation";
+import { IFounder } from "@/types";
+import { motion as m } from "framer-motion";
+import { FC } from "react";
 interface Props {
   data: IFounder[];
 }
@@ -12,9 +15,20 @@ const OurFounders: FC<Props> = ({ data }) => {
         <h2 className="text-t-26 md:text-t-40  lg:text-[3.25rem] leading-[146%] sm:leading-[130%] text-left md:text-center">
           Our Founders
         </h2>
-        <div className="grid gap-2 lg:gap-5 grid-cols-3">
+        <m.div
+          variants={animateContainer}
+          initial="hidden"
+          exit="exit"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.6 }}
+          className="grid gap-2 lg:gap-5 grid-cols-3"
+        >
           {data.map((item) => (
-            <div key={item.id} className="space-y-4 lg:space-y-8">
+            <m.div
+              variants={animateItems}
+              key={item.id}
+              className="space-y-4 lg:space-y-8"
+            >
               <div>
                 <Avatar className=" block mx-auto max-w-[90%] w-full h-full">
                   <AvatarImage src={item.avatar} />
@@ -31,9 +45,9 @@ const OurFounders: FC<Props> = ({ data }) => {
                   CEO &amp, Founder
                 </p>
               </div>
-            </div>
+            </m.div>
           ))}
-        </div>
+        </m.div>
       </div>
     </section>
   );
